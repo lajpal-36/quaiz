@@ -1,0 +1,374 @@
+/* Professional stylesheet for EMS frontend */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f6fb;
+    color: #0f172a;
+    line-height: 1.5
+}
+
+.container {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 16px
+}
+
+/* Header */
+.site-header {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    padding: 14px 0;
+    color: #fff
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.95);
+    margin-left: 12px;
+    text-decoration: none;
+    font-weight: 600
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72vh
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 36px;
+    border-radius: 12px
+}
+
+.login-card h1 {
+    font-size: 26px;
+    margin-bottom: 6px
+}
+
+.login-card p {
+    color: #667085;
+    margin-bottom: 18px
+}
+
+.form-group {
+    margin-bottom: 14px
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    background: #fff
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.12);
+    border-color: #6366f1
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #111;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.btn-success {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.btn-logout {
+    background: #ef4444;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none
+}
+
+/* Dashboard */
+.dashboard {
+    display: none;
+    min-height: 70vh;
+    padding: 12px 0
+}
+
+.dashboard.active {
+    display: block
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+    margin-bottom: 18px
+}
+
+.dashboard-card {
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff
+}
+
+.dashboard-section {
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff
+}
+
+.quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px
+}
+
+.quiz-card {
+    padding: 16px;
+    border-radius: 12px;
+    background: #fff;
+    border-left: 4px solid #4f46e5
+}
+
+.quiz-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px
+}
+
+.quiz-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+/* Quiz attempt */
+.quiz-attempt {
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.quiz-header {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eef2ff;
+    border-radius: 6px;
+    overflow: hidden
+}
+
+.progress-fill {
+    height: 100%;
+    background: #4f46e5;
+    width: 0
+}
+
+.question-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    margin-bottom: 12px
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fbfdff;
+    border: 1px solid #eef2ff;
+    cursor: pointer
+}
+
+.option:hover {
+    border-color: #c7d2fe
+}
+
+.option.selected {
+    background: #eef2ff;
+    border-color: #4f46e5
+}
+
+/* Result */
+.result-card {
+    padding: 28px;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center
+}
+
+.score {
+    font-size: 44px;
+    font-weight: 700;
+    color: #10b981
+}
+
+.score.low {
+    color: #ef4444
+}
+
+.score.medium {
+    color: #f59e0b
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 60
+}
+
+.modal[aria-hidden="false"] {
+    display: flex
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.6)
+}
+
+.modal-panel {
+    position: relative;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    z-index: 10;
+    max-height: 80vh;
+    overflow-y: auto
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    margin: 0
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.modal-close:hover {
+    color: #374151
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px
+}
+
+.questions-list {
+    max-height: 60vh;
+    overflow-y: auto
+}
+
+.question-item {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px
+}
+
+/* Responsive */
+@media(max-width:640px) {
+    .nav {
+        padding: 0 12px
+    }
+
+    .container {
+        margin: 18px auto;
+        padding: 0 12px
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr
+    }
+}

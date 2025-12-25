@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}E.M.S{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="brand" href="#">E.M.S</a>
+            </div>
+            <div class="nav-right">
+                <a href="#" id="navDashboard" class="nav-link" style="display:none;">Dashboard</a>
+                <a href="#" id="navLogout" class="nav-link" style="display:none;">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <!-- Modal for viewing lists and details -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-panel" role="dialog" aria-modal="true">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+            </div>
+            <div id="modalContent"></div>
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
